@@ -1,106 +1,77 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>åœ¨è·¯ä¸Š</title>
-<meta name="keywords" content="åœ¨è·¯ä¸Š" />
-<meta name="description" content="åœ¨è·¯ä¸Š" />
+<meta charset="gb2312">
+<title>ÑîÇà¸öÈË²©¿Í - Ò»¸öÕ¾ÔÚwebÇ°¶ËÉè¼ÆÖ®Â·µÄÅ®¼¼ÊõÔ±¸öÈË²©¿ÍÍøÕ¾</title>
+<meta name="keywords" content="¸öÈË²©¿Í,ÑîÇà¸öÈË²©¿Í,¸öÈË²©¿ÍÄ£°å,ÑîÇà" />
+<meta name="description" content="ÑîÇà¸öÈË²©¿Í£¬ÊÇÒ»¸öÕ¾ÔÚwebÇ°¶ËÉè¼ÆÖ®Â·µÄÅ®³ÌÐòÔ±¸öÈËÍøÕ¾£¬Ìá¹©¸öÈË²©¿ÍÄ£°åÃâ·Ñ×ÊÔ´ÏÂÔØµÄ¸öÈËÔ­´´ÍøÕ¾¡£" />
 <link href="css/base.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
+<link href="css/about.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="js/modernizr.js"></script>
 <![endif]-->
-<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/scrollReveal.js"></script>
 </head>
 <body>
-<div id="wrapper">
-  <header>
-    <div class="headtop"></div>
-    <div class="contenttop">
-      <div class="logo f_l">åœ¨è·¯ä¸Š</div>
-      <div class="search f_r">
-        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
-          <input name="keyboard" id="keyboard" class="input_text" value="è¯·è¾“å…¥å…³é”®å­—" style="color: rgb(153, 153, 153);" onfocus="if(value=='è¯·è¾“å…¥å…³é”®å­—'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='è¯·è¾“å…¥å…³é”®å­—'}" type="text">
-          <input name="show" value="title" type="hidden">
-          <input name="tempid" value="1" type="hidden">
-          <input name="tbname" value="news" type="hidden">
-          <input name="Submit" class="input_submit" value="æœç´¢" type="submit">
-        </form>
-      </div>
-      <div class="blank"></div>
-      <nav>
-        <div  class="navigation">
-          <ul class="menu">
-			 <li><a href="index.html">ç½‘ç«™é¦–é¡µ</a></li> 
-			<li><a href="newslistpic.html">æŠ€æœ¯æ–‡ç« </a> </li>
-            
-            <li><a href="#">æˆ‘çš„æ—¥è®°</a>
-              <ul>
-                <li><a href="newslistpic.html">ä¸ªäººæ—¥è®°</a></li>
-                <li><a href="newslistpic.html">å­¦ä¹ ç¬”è®°</a></li>
-              </ul>
-            </li>
-           <li><a href="#">å…³äºŽæˆ‘</a>
-              <ul>
-                <li><a href="about.html">ä¸ªäººç®€ä»‹</a></li>
-                <li><a href="listpic.html">ä¸ªäººç›¸å†Œ</a></li>
-              </ul>
-            </li>
-            <li><a href="#">ç»™æˆ‘ç•™è¨€</a> </li>
-          </ul>
-        </div>
-      </nav>
-      <SCRIPT type=text/javascript>
-	// Navigation Menu
-	$(function() {
-		$(".menu ul").css({display: "none"}); // Opera Fix
-		$(".menu li").hover(function(){
-			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
-		},function(){
-			$(this).find('ul:first').css({visibility: "hidden"});
-		});
-	});
-</SCRIPT> 
-    </div>
-  </header>
+<header>
+  <div class="logo" data-scroll-reveal="enter right over 1s"><a href="/"><img src="images/logo.png"></a></div>
+  <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s"><a href="index.html"><span>Ê×Ò³</span><span class="en">Home</span></a><a href="about.html"><span>¹ØÓÚÎÒ</span><span class="en">About</span></a><a href="manshenghuo.html"><span>ÂýÉú»î</span><span class="en">Life</span></a><a href="learn.html"><span>ËéÑÔËéÓï</span><span class="en">Doing</span></a><a href="mbfx.html"><span>Ä£°å·ÖÏí</span><span class="en">Share</span></a><a href="learn.html"><span>Ñ§ÎÞÖ¹¾³</span><span class="en">Learn</span></a><a href="gbook.html"><span>ÁôÑÔ</span><span class="en">Saying</span></a></nav>
+</header>
+<article>
   <div class="container">
-    <div class="con_content">
-      <div class="about_box">
-        <h2 class="nh1"><span>æ‚¨çŽ°åœ¨çš„ä½ç½®æ˜¯ï¼š<a href="/" target="_blank">ç½‘ç«™é¦–é¡µ</a>>><a href="#" target="_blank">ä¿¡æ¯æµè§ˆ</a></span><b>ä¸ªäººç®€ä»‹</b></h2>
-        <div class="f_box">
-          <p class="a_title">ä¸ªäººç®€ä»‹</p>
-          <p class="p_title"></p>
-          <!--  <p class="box_p"><span>å‘å¸ƒæ—¶é—´ï¼š2017-07-07 15:12:42</span><span>ä½œè€…ï¼šå”å­æ–‡</span><span>æ¥æºï¼šç¨½æŸ¥æ”¯é˜Ÿ</span><span>ç‚¹å‡»ï¼š111056</span></p>--> 
-          <!-- å¯ç”¨äºŽå†…å®¹æ¨¡æ¿ --> 
-        </div>
-        <ul class="about_content">
-          <p> äººç”Ÿå°±æ˜¯ä¸€ä¸ªå¾—ä¸Žå¤±çš„è¿‡ç¨‹ï¼Œè€Œæˆ‘å´æ˜¯ä¸€ä¸ªå¹¸è¿è€…ï¼Œå¾—åˆ°çš„æ°¸è¿œæ¯”å¤±åŽ»çš„å¤šã€‚ç”Ÿæ´»çš„åŽ‹åŠ›è¿«ä½¿æˆ‘æ”¾å¼ƒäº†è½»æ¾çš„å‰å°æŽ¥å¾…ï¼Œæ”¾å¼ƒäº†ä½“é¢çš„ç¼–è¾‘ï¼Œæ¢æ¥è™½æœ‰äº›è“¬å¤´åž¢é¢çš„å·¥ä½œï¼Œä½†æ˜¯æˆ‘ä»ç„¶å¾ˆäº«å—é‚£äº›ç†¬å¾—åªå‰©ä¸‹é»‘çœ¼åœˆçš„æ—¥å­ï¼Œå› ä¸ºæˆ‘åœ¨å­¦ä¹ ä½¿ç”¨Photoshopã€Flashã€Dreamweaverã€ASPã€PHPã€JSP...ä¸­æ¿€å‘äº†å…´è¶£ï¼Œç„¶åŽè¶Šèµ°è¶Šè¿œ....</p>
-          <p><img src="images/01.jpg"></p>
-          <p>â€œå†¥å†¥ä¸­è¯¥æ¥åˆ™æ¥ï¼Œæ— å¤„å¯é€ƒâ€ã€‚ </p>
-        </ul>
-        <!--    <div class="nextinfos">
-      <p>ä¸Šä¸€ç¯‡ï¼š<a href="/">åŒºä¸­åŒ»åŒ»é™¢å¼€å±•å¿—æ„¿æœåŠ¡æ´»åŠ¨</a></p>
-      <p>ä¸‹ä¸€ç¯‡ï¼š<a href="/">å¹¿å®‰åŒºæ‰¹å‡†â€œå•ç‹¬ä¸¤å­©â€500ä¾‹</a></p>
-    </div>--> 
-        <!-- å¯ç”¨äºŽå†…å®¹æ¨¡æ¿ --> 
-        
-        <!-- containerä»£ç  ç»“æŸ --> 
-      </div>
+    <div class="banner">
+      <p data-scroll-reveal="enter top over 2s">ÎÒÃÇ²»Í£µÄ·­Åª×Å»ØÒä£¬È´ÔÙÒ²ÕÒ²»»ØÄÇÊ±µÄ×Ô¼º</p>
+      <p data-scroll-reveal="enter left over 2s after 1s">ÈËÉú£¬ÊÇÒ»³¡Ê¢´óµÄÓö¼û¡£ÈôÄã¶®µÃ£¬¾ÍÇëÕäÏ§¡£</p>
+      <p data-scroll-reveal="enter bottom over 2s after 2s">ÎÞÂÛÏÂ¶à¾ÃµÄÓê£¬×îºó¶¼»áÓÐ²Êºç£»ÎÞÂÛÄã¶àÃ´±¯ÉË£¬ÒªÏàÐÅÐÒ¸£ÔÚÇ°·½µÈºò.</p>
     </div>
-    <div class="blank"></div>
-  </div>
-  <!-- containerä»£ç  ç»“æŸ -->
-  
-  <footer>
-    <div class="footer">
-      <div class="f_l">
-        <p>All Rights Reserved ç‰ˆæƒæ‰€æœ‰ï¼š<a href="http://www.yangqq.com">æ¨é’ä¸ªäººåšå®¢</a> å¤‡æ¡ˆå·ï¼šèœ€ICPå¤‡00000000å·</p>
-      </div>
-      <div class="f_r textr">
-        <p>Design by DanceSmile</p>
-      </div>
+    <div class="memorial_day">
+      <div class="time_axis"></div>
+      <ul>
+        <li class="n1"><a href="/">Ç°¶ËÈëÐÐ</a>
+          <div class="dateview">2009</div>
+        </li>
+        <li class="n2"><a href="/">´´½¨¸öÈË²©¿Í</a>
+          <div class="dateview">2011-01-12</div>
+        </li>
+        <li class="n3"><a href="/">·ÖÏíµÚÒ»¸ö²©¿ÍÄ£°å</a>
+          <div class="dateview">2013-06-08</div>
+        </li>
+        <li class="n4"><a href="/">ÖÆ×÷µÚÒ»¸öhtml5Ä£°å</a>
+          <div class="dateview">2013-08-08</div>
+        </li>
+        <li class="n5"><a href="/">Ä£°å¸ü»»ÎªÊ±¼äÖá</a>
+          <div class="dateview">2017-09-08</div>
+        </li>
+      </ul>
     </div>
-  </footer>
+    <div class="about left">
+  <h2>Just about me</h2>
+    <ul> 
+     <p>ÑîÇà£¬Å®£¬Ò»¸ö80ºó²Ý¸ùÅ®Õ¾³¤£¡09ÄêÈëÐÐ¡£´Ó°á×©Ò»ÑùµÄÉú»î·½Ê½»»³ÉÁËÏÖÔÚÓÐ¡°µ¥¡±¶ø¾ÓµÄÈÕ×Ó¡£µ±È»Õâ¸öµ¥²»ÊÇµ¥ÉíµÄµ¥£¬¸úÎÒµÄÖ°ÒµÏà±È£¬°®ÇéÍÑµ¥²¢²»ÊÇÎÊÌâ£¡ËäÈ»¼«¾¡¿Á¿ÌµÄÕ÷»éÌõ¼þµ«Ò²Ô¶²»¼°¿Í»§Ç§Ææ°Ù¹ÖµÄÒªÇó¡£¸æ±ðÁË³¯¾ÅÍíÎå£¬¶ã¹ýÁË·ç´µÈÕÉ¹£¬ËäÈ»²»ÔÙÓÐ½×ÌÝÊ½µÄ¹¤×Ê£¬µ«ÊÇÅ¼¶û¿ÉÒÔ¸ø×Ô¼º·Å·Å¼Ù£¬Íì×ÅÀÏ¹«£¬Ò»ÆðÇá×°ÂÃÐÐ¡£</p>
+<p>
+ÈËÉú¾ÍÊÇÒ»¸öµÃÓëÊ§µÄ¹ý³Ì£¬¶øÎÒÈ´ÊÇÒ»¸öÐÒÔËÕß£¬µÃµ½µÄÓÀÔ¶±ÈÊ§È¥µÄ¶à¡£Éú»îµÄÑ¹Á¦ÆÈÊ¹ÎÒ·ÅÆúÁËÇáËÉµÄÇ°Ì¨½Ó´ý£¬·ÅÆúÁËÌåÃæµÄ±à¼­£¬»»À´ËäÓÐÐ©ÅîÍ·¹¸ÃæµÄ¹¤×÷£¬µ«ÊÇÎÒÈÔÈ»ºÜÏíÊÜÄÇÐ©°¾µÃÖ»Ê£ÏÂºÚÑÛÈ¦µÄÈÕ×Ó£¬ÒòÎªÎÒÔÚÑ§Ï°Ê¹ÓÃPhotoshop¡¢Flash¡¢Dreamweaver¡¢ASP¡¢PHP¡¢JSP...ÖÐ¼¤·¢ÁËÐËÈ¤£¬È»ºóÔ½×ßÔ½Ô¶....</p>
+<p>ÔÚÕâÌõÂ·ÉÏ£¬ÎÒÒª¸ÐÐ»Èý¸öÈË£¬µÚÒ»¸öÊÇÎÒ´ÓÊÂ±à¼­µÄÀÏ°å£¬ÊÇËû¸øÁËÎÒ³ä·ÖÑ§Ï°ÑÐ¾¿divµÄÊ±¼ä£¬µÚ¶þ¸öÈËÊÇÎÒµÄÀÏÊ¦£¬Èç¹û²»ÊÇ½ÖÉÏµÄÒ»´ÎÅ¼Óö£¬Èç¹û²»ÊÇÒòÎªÎÒÕýÈ±Ç®£¬ÎÒ²»»áÈ¥Ç¿ÆÈ×Ô¼º×ö²»»áµÄÊÂÇé£¬µ«ÊÇ½ðÇ®µÄÓÕ»óÊµÔÚÊÇµÖµ²²»ÁË£¬ÓÚÊÇÎÒÑ¡ÔñÁË¡°½ÓÕÐ¡±£¬¶«Æ´Î÷´ÕµÄ°ÑÒ»¸öÍøÕ¾×öºÃÁË£¬µ±Ê±»¹¿°³Æ¼Ñ×÷µÄÍøÕ¾ÖÁ½ñÒÑ³¾¹é³¾ÍÁ¹éÍÁÁË¡£µÚÈý¸öÈË£¬ÎÒ×ÜËµËûÊÇÎÒµÄ²®ÀÖ£¬ÒòÎªÎÒµ±³õÓ¦Æ¸¼¼ÊõÔ±µÄÊ±ºò£¬ÎÒËµÎÒÊ²Ã´¶¼²»»á£¬µ«ÊÇËûÈ´¸øÁËÎÒ»ú»á£¬¶øÎÒ¾ÍÀÎÀÎµÄ°ÑÎÕÁËÄÇ´Î»ú»á£¬Ö±µ½ÏÖÔÚÈç¹û²»ÊÇÎÒÖ÷¶¯°ÑÓòÃûºÍ¿Õ¼ä×ª³öÀ´£¬ÎÒ»áÒ»Ö±°ÔÕ¼×Å¹«Ë¾×ÊÔ´£¬Ãâ·ÑÏÂÈ¥£¨¿ÉÎÒ¾ÍÆ«Æ«²»ÊÇÏ²»¶°®Õ¼±ãÒËµÄÈË£¬×Ü¸Ð¾õÇ·ÁË¾ÍµÃ»¹£©...</p>
+<p>
+»¹ÒªÌØ±ð¸ÐÐ»Ò»¸öÈË£¬ÊÇÎÒµÄÀÏ¹«¡£ËûÊÇÎÒµÄ°Ù¿Æ£¬ÎÒ²»»áµÄ£¬Ëû»á£¬×îºóÎÒ»¹ÊÇ²»»á¡£²©¿ÍÄÜ×öµ½½ñÌìÕâÑù£¬Ò»°ë¶¼ÓÐËûµÄ¹¦ÀÍ¡£Ëû²»½ö½öÖ§³ÖÎÒµÄÊÂÒµ×÷ÎªÎÒÓÐÁ¦µÄ¾­¼Ãºó¶Ü£¬»¹ºÁÎÞÔ¹ÑÔµÄ°üÈÝÎÒËùÓÐ¹¤×÷¡¢Éú»îµ±ÖÐÓÐÀíÎÞÀíµÄ»µÆ¢Æø£¬Ôø¾­ÎÒÊÇ¶àÃ´ÓÐ×Ô¼ºÔ­ÔòµÄÒ»¸öÈË£¬µ«ÊÇÓöµ½Ëû£¬´òÆÆÁËÎÒ×Ô¼º±ÏÉú¼á³ÖµÄÔ­Ôò£¬Ï²»¶Ò»¾ä»°¡°Ú¤Ú¤ÖÐ¸ÃÀ´ÔòÀ´£¬ÎÞ´¦¿ÉÌÓ¡±¡£
+</p>
+    </ul>
+    <h2>About my blog</h2>
+    <p>Óò  Ãû£ºwww.yangqq.com ´´½¨ÓÚ2011Äê01ÔÂ12ÈÕ </p>
+    <p>·þÎñÆ÷£º°¢ÀïÔÆ·þÎñÆ÷<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=8smrzoqa&amp;productCode=vm" target="_blank" class="blog_link">¹ºÂò¿Õ¼ä</a><a href="/jstt/web/2014-01-18/644.html" target="_blank" class="blog_link">²Î¿¼ÎÒµÄ¿Õ¼äÅäÖÃ</a></p>
+    <p>³Ì  Ðò£ºPHP µÛ¹úCMS7.0</p>
+
+
 </div>
+  </div>
+  </aside>
+</article>
+<footer> Design by DanceSmile <a href="/">ÊñICP±¸11002373ºÅ-1</a> </footer>
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+</script>
 </body>
 </html>

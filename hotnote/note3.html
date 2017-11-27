@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>在路上</title>
+<meta name="keywords" content="在路上,博客,回忆" />
+<meta name="description" content="一路走来几多风雨几多愁,只有不断学习才能让我真正变得强大到百毒不侵,无所畏惧" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script src="js/scrollReveal.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo" data-scroll-reveal="enter right over 1s"> <!-- <a href="/"><img src="images/logo.png"></a>--><font size='12'>在路上</font></div> 
+  <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s">
+		<a href="../index.html"><span>首页</span><span class="en">Home</span></a>
+		<a href="../memory.html"><span>回忆</span><span class="en">Life</span></a>
+		<!-- <!-- <a href="learn.html"><span>碎言碎语</span><span class="en">Doing</span></a> -->  
+		<!-- <a href="mbfx.html"><span>模板分享</span><span class="en">Share</span></a> -->
+		<!-- <!-- <a href="learn.html"><span>学无止境</span><span class="en">Learn</span></a> -->  
+		<a href="../about.html"><span>关于我</span><span class="en">About</span></a>
+		<!-- <a href="gbook.html"><span>留言</span><span class="en">Saying</span></a> -->
+  </nav>
+</header>
+ <article>
+  <div class="container">
+  <br />
+
+ 
+<pre style="font-size:20px;margin-left:50px;margin-right:50px;white-space: pre-wrap;word-wrap: break-word;">
+
+ <h1>如何提高Android Studio的编译速度</h1>
+ <hr />
+
+ <h1 id="articleHeader0"></h1>
+使用Gradle 2.4
+
+Gradle 2.4对执行性能有很大的优化，但Android Studio现在默认使用的是Gradle 2.2,?所以我们需要手动让Android Studio使用Gradle 2.4，在项目根目录下的 build.grade中加入
+<pre>task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+</pre>
+然后打开终端执行 ./gradlew wrapper，就可以下载Gradle 2.4了，下载完成后，我们需要在 Android Studio让我们的项目使用Gradle 2.4
+
+<img src="https://segmentfault.com/image?src=http://upload-images.jianshu.io/upload_images/18501-14982b49ea83aa6c.png&amp;objectId=1190000002976401&amp;token=b25f2940596751419ca9d867c0274c79" data-src="https://segmentfault.com/image?src=http://upload-images.jianshu.io/upload_images/18501-14982b49ea83aa6c.png&amp;objectId=1190000002976401&amp;token=b25f2940596751419ca9d867c0274c79" />
+<h2 id="articleHeader1">使用多线程编译</h2>
+在项目根目录中创建gradle.properties，加入以下配置
+<pre>org.gradle.daemon=true
+org.gradle.parallel=true
+org.gradle.jvmargs=-Xmx1024m
+</pre>
+<h2 id="articleHeader2">打开dex增量编译</h2>
+这还是一个实验性的功能，但是还是推荐打开试试?在项目主Module下build.grade的Android中加入
+<pre>dexOptions {
+        incremental true
+}
+</pre>
+这是官方的速度对比，据说下一代编译速度更快
+<img src="https://segmentfault.com/image?src=http://upload-images.jianshu.io/upload_images/18501-ec773fc3516fafbe.png&amp;objectId=1190000002976401&amp;token=07db8095a5b223d52dc0884948b8f6d7" data-src="https://segmentfault.com/image?src=http://upload-images.jianshu.io/upload_images/18501-ec773fc3516fafbe.png&amp;objectId=1190000002976401&amp;token=07db8095a5b223d52dc0884948b8f6d7" />
+
+ 
+</div>
+ 
+</pre>
+</article>
+</div>
+<footer>&copy;2016-2017 张阿坤@Akkun  <a href='http://www.miibeian.gov.cn' target='_blank'>豫ICP备17008159号</a> </footer>
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+</script> 
+</body>
+</html>

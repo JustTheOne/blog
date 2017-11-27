@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>在路上</title>
+<meta name="keywords" content="在路上,博客,回忆" />
+<meta name="description" content="一路走来几多风雨几多愁,只有不断学习才能让我真正变得强大到百毒不侵,无所畏惧" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script src="js/scrollReveal.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo" data-scroll-reveal="enter right over 1s"> <!-- <a href="/"><img src="images/logo.png"></a>--><font size='12'>在路上</font></div> 
+  <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s">
+		<a href="../index.html"><span>首页</span><span class="en">Home</span></a>
+		<a href="../memory.html"><span>回忆</span><span class="en">Life</span></a>
+		<!-- <!-- <a href="learn.html"><span>碎言碎语</span><span class="en">Doing</span></a> -->  
+		<!-- <a href="mbfx.html"><span>模板分享</span><span class="en">Share</span></a> -->
+		<!-- <!-- <a href="learn.html"><span>学无止境</span><span class="en">Learn</span></a> -->  
+		<a href="../about.html"><span>关于我</span><span class="en">About</span></a>
+		<!-- <a href="gbook.html"><span>留言</span><span class="en">Saying</span></a> -->
+  </nav>
+</header>
+ <article>
+  <div class="container">
+  <br />
+<pre style="font-size:20px;margin-left:50px;margin-right:50px;white-space: pre-wrap;word-wrap: break-word;">
+	<h1>CentOS 7关闭默认防火墙启用iptables防火墙</h1>
+	<hr />
+ 
+CentOS 7.0默认使用的是firewall作为防火墙，这里改为iptables防火墙步骤。 
+
+①关闭firewall
+#停止firewall
+[root@zkyml ~]#  <span style="color: #0000ff;">systemctl stop firewall.service</span>
+
+#禁止firewall开机启动
+[root@zkyml ~]#  <span style="color: #0000ff;">systemctl disable firewall.service</span>
+
+#卸载firewalld
+[root@zkyml ~]#  <span style="color: #0000ff;">yum -y remove firewalld</span>
+
+②安装iptables防火墙
+#安装iptables
+[root@zkyml ~]# <span style="color: #0000ff;">yum install iptables-services</span>
+
+#编辑防火墙文件，添加以下常用端口
+[root@zkyml ~]# <span style="color: #0000ff;">vi /etc/sysconfig/iptables</span>
+<span style="color: #00ff00;">-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT</span>
+<span style="color: #00ff00;"> -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT</span>
+<span style="color: #00ff00;"> -A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT</span>
+<span style="color: #00ff00;"> -A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT</span>
+
+#重启防火墙使配置文件生效
+[root@zkyml ~]# <span style="color: #0000ff;">systemctl restart iptables.service</span>
+
+#设置iptables防火墙为开机启动项
+[root@zkyml ~]#  <span style="color: #0000ff;">systemctl enable iptables.service</span>
+
+③关闭SELINUX
+#如果不想重启的话 可以临时关闭，但是重启后失效
+[root@zkyml ~]#<span style="color: #0000ff;"> setenforce 0</span>
+
+#修改配置，永久生效
+[root@zkyml ~]#  <span style="color: #0000ff;">vi /etc/selinux/config</span>
+<span style="color: #00ff00;">#注释以下配置</span>
+<span style="color: #00ff00;"> #SELINUX=enforcing</span>
+<span style="color: #00ff00;"> #SELINUXTYPE=targeted</span>
+<span style="color: #00ff00;">#增加以下配置</span>
+<span style="color: #00ff00;"> SELINUX=disabled</span>
+#重启系统，配置生效
+[root@zkyml ~]# <span style="color: #0000ff;">shutdown -r now </span>
+
+查看状态
+[root@zkyml ~]# <span style="color: #0000ff;">getenforce</span>
+<span style="color: #00ff00;">disabled</span>
+显示如上，证明已经关闭
+
+</pre>
+</article>
+</div>
+<footer>&copy;2016-2017 张阿坤@Akkun  <a href='http://www.miibeian.gov.cn' target='_blank'>豫ICP备17008159号</a> </footer>
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+</script> 
+</body>
+</html>

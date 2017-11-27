@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>在路上</title>
+<meta name="keywords" content="在路上,博客,回忆" />
+<meta name="description" content="一路走来几多风雨几多愁,只有不断学习才能让我真正变得强大到百毒不侵,无所畏惧" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script src="js/scrollReveal.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo" data-scroll-reveal="enter right over 1s"> <!-- <a href="/"><img src="images/logo.png"></a>--><font size='12'>在路上</font></div> 
+  <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s">
+		<a href="../index.html"><span>首页</span><span class="en">Home</span></a>
+		<a href="../memory.html"><span>回忆</span><span class="en">Life</span></a>
+		<!-- <!-- <a href="learn.html"><span>碎言碎语</span><span class="en">Doing</span></a> -->  
+		<!-- <a href="mbfx.html"><span>模板分享</span><span class="en">Share</span></a> -->
+		<!-- <!-- <a href="learn.html"><span>学无止境</span><span class="en">Learn</span></a> -->  
+		<a href="../about.html"><span>关于我</span><span class="en">About</span></a>
+		<!-- <a href="gbook.html"><span>留言</span><span class="en">Saying</span></a> -->
+  </nav>
+</header>
+ <article>
+  <div class="container">
+  <br />
+
+ 
+<pre style="font-size:20px;margin-left:50px;margin-right:50px;white-space: pre-wrap;word-wrap: break-word;">
+
+ <h1>centos6.5搭建apache+mysql+php环境</h1>
+ <hr />
+
+<hr />
+
+<code> 一、安装 MySQL
+[root@zkyml ~]#<span style="color: #0000ff;"> yum -y install mysql mysql-server</span>
+安装完毕，让 MySQL 能够随系统自动启动：
+[root@zkyml ~]# <span style="color: #0000ff;">chkconfig mysqld on</span>
+[root@zkyml ~]# <span style="color: #0000ff;">/etc/init.d/mysqld start</span>
+等价于 <span style="color: #0000ff;">service mysqld start</span>
+设置 MySQL 数据 root 账户的密码：
+[root@zkyml ~]# <span style="color: #0000ff;">mysql_secure_installation</span>
+当出现如下提示时候直接按回车：
+Enter current password for root
+出现如下再次回车：
+Set root password? [Y/n]
+出现如下提示输入你需要设置的密码，回车后在输入一次确认：
+New password:
+接下来还会有四个确认，分别是：
+Remove anonymous users? [Y/n]
+Disallow root login remotely? [Y/n]
+Remove test database and access to it? [Y/n]
+Reload privilege tables now? [Y/n]
+直接回车即可。
+yum安装的mysql版本为5.1.7，默认latin字符，需要修改为utf-8。添加default-character-set=utf8，如下
+[root@zkyml ~]#<span style="color: #0000ff;"> vi /etc/my.cnf</span>
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+default-character-set=utf8
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+[mysql]
+<span style="color: #0000ff;">default-character-set=utf8</span></code>
+
+<hr />
+
+二、安装 Apache(httpd) 组件
+[root@zkyml ~]# <span style="color: #0000ff;">yum -y install httpd</span>
+同样配置系统让 Apache 随系统启动：
+[root@zkyml ~]# <span style="color: #0000ff;">chkconfig httpd on</span>
+配置完毕，启动 Apache：
+[root@zkyml ~]# <span style="color: #0000ff;">/etc/init.d/httpd start</span>
+等价于 <span style="color: #0000ff;">service httpd start</span>
+此时内网访问能够看到 “Apache 2 Test Page powered by CentOS” 的测试页面。<span style="color: #ff0000;">
+如果其他机器访问这台服务无法显示这个页面，而直接在这台服务器上可以访问的话，一般情况下是 CentOS 自带的防火墙禁止了。你只需要进入防火墙，将对应的 “80” 端口打开即可</span>。<span style="color: #00ff00;"><a style="color: #00ff00;" href="http://170193l9r8.51mypc.cn/?p=141">iptables开放端口设置看这里</a></span>
+在 CentOS 中 Apache 的服务名为httpd，默认根目录是 /var/www/html，配置文件 /etc/httpd/conf/httpd.conf。其他配置存储在 /etc/httpd/conf.d/ 目录。
+
+<hr />
+
+三、安装 PHP
+输入如下指令安装 PHP:
+[root@zkyml ~]# <span style="color: #0000ff;">yum -y install php</span>
+需要重新启动 Apache 服务：
+[root@zkyml ~]# <span style="color: #0000ff;">/etc/init.d/httpd restart</span>
+等价于 <span style="color: #0000ff;">service httpd restart</span>
+四、测试 PHP 相关信息
+这步实际上可以省略，但是为了测试是否安装成功，你可以新建一个 PHP 页面进行测试，使用 vim 编辑器新建：
+[root@zkyml ~]# <span style="color: #0000ff;">vi /var/www/html/test.php</span>
+按 “i” 键进行编辑，输入：
+&lt;?php
+phpinfo();
+?&gt;
+编辑完毕，按 “ESC” 键退出编辑模式，接着输入：
+:wq
+然后回车，即保存并退出。
+此时你可以访问你的站点地址，例如 “http://www.zkyml.com/php/msg.php”，查看是否能看到相关的 PHP 信息。
+五、将 PHP 模块和 MySQL 模块关联起来
+还需要将 PHP 和 MySQL 关联起来，才能正常工作。
+搜索模块：
+[root@zkyml ~]# <span style="color: #0000ff;">yum search php</span>
+安装相关模块：
+[root@zkyml ~]#<span style="color: #0000ff;"> yum install php-mysql php-gd php-imap php-ldap php-odbc</span> <span style="color: #0000ff;">php-pear php-xml php-xmlrpc</span>
+需要重启 Apache 模块才能生效：
+[root@zkyml ~]# <span style="color: #0000ff;">/etc/init.d/httpd restart</span>
+
+&nbsp;
+ 
+ 
+</div>
+ 
+</pre>
+</article>
+</div>
+<footer>&copy;2016-2017 张阿坤@Akkun  <a href='http://www.miibeian.gov.cn' target='_blank'>豫ICP备17008159号</a> </footer>
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+</script> 
+</body>
+</html>

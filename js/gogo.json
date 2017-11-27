@@ -1,0 +1,59 @@
+var nameList=[
+{
+"monthday":"11-26",
+"year":"2017",
+"title":"CentOS 7关闭默认防火墙启用iptables防火墙",
+"content":"CentOS 7.0默认使用的是firewall作为防火墙，这里改为iptables防火墙...",
+"imgsrc":"images/linux.jpg",
+"ahref":"hotnote/note1.html"
+},
+ {
+"monthday":"11-19",
+"year":"2017",
+"title":"materialish-progress进度条",
+"content":"一个material 风格的滚动式进度条(progress wheel)，兼容2.3。系统自带的progress wheel在Lollipop上看起来很好看，在4.0上也还将就，但是在2.3版本上看起来就有点吓人了，而我们...",
+"imgsrc":"images/android.jpg",
+"ahref":"hotnote/note2.html"
+},
+ {
+"monthday":"11-12",
+"year":"2017",
+"title":"如何提高Android Studio的编译速度",
+"content":"Gradle 2.4对执行性能有很大的优化，但Android Studio现在默认使用的是Gradle 2.2,所以我们需要手动让Android Studio使用Gradle 2.4，在项目根目录下的 build.grade中加入...",
+"imgsrc":"images/android.jpg",
+"ahref":"hotnote/note3.html"
+}, 
+{
+"monthday":"11-05",
+"year":"2017",
+"title":"nat123内网穿透4CentOS6.x",
+"content":"系统2.8.x（包括2.8.0）及以上Linux平台安装启动过程（相对简单/推荐）：...",
+"imgsrc":"images/linux.jpg",
+"ahref":"hotnote/note4.html"
+}, 
+{
+"monthday":"10-29",
+"year":"2017",
+"title":"nat123内网穿透4CentOS7.x",
+"content":"nat123内网穿透4CentOS7.x网站增加吸引力...",
+"imgsrc":"images/linux.jpg",
+"ahref":"hotnote/note5.html"
+}, 
+{
+"monthday":"10-22",
+"year":"2017",
+"title":"安卓/html上传后端php接收存储文件",
+"content":"后台死活传不上文件，索性就直接写了前端demo和后端上传接口，给自己和他测试用...",
+"imgsrc":"images/android.jpg",
+"ahref":"hotnote/note6.html"
+}, 
+{
+"monthday":"10-15",
+"year":"2017",
+"title":"centos6.5搭建apache+mysql+php环境",
+"content":"centos6.5搭建apache+mysql+php环境centos6.5搭建apache+mysql+php环境centos6.5搭建apache+mysql+php环境...",
+"imgsrc":"images/linux.jpg",
+"ahref":"hotnote/note7.html"
+}
+ 
+]

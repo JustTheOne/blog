@@ -12,10 +12,13 @@
 <script src="js/modernizr.js"></script>
 <![endif]-->
 <script src="js/scrollReveal.js"></script>
+
+
 </head>
 <body>
+
 <header>
-  <div class="logo" data-scroll-reveal="enter right over 1s"> <!-- <a href="/"><img src="images/logo.png"></a>--><font size='12'>在路上</font></div> 
+  <div class="logo" id="logo" data-scroll-reveal="enter right over 1s"> <!-- <a href="/"><img src="images/logo.png"></a>--><font size='12'>在路上</font></div> 
   <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s">
 		<a href="index.html"><span>首页</span><span class="en">Home</span></a>
 		<a href="memory.html"><span>回忆</span><span class="en">Life</span></a>
@@ -48,75 +51,30 @@
 				<p>
 					<a href="/">第三杯敬你</a>
 				</p>
-				<figcaption>对于自己的梦想执着努力，对于他人的追逐避如蛇蝎，对于家人的期待沉默不语，对于某的失去如临深渊。大概今生这些事，你都不会知晓。我干杯，你随意</figcaption>
+				<figcaption>对于梦想的执着努力，对于他人的追逐避如蛇蝎，对于家人的期待沉默不语，对于某的失去如临深渊。大概今生这些事，你都不会知晓。我干杯，你随意</figcaption>
 			</figure>
     </div>
-   <ul class="cbp_tmtimeline">
-					<li>
-						<time class="cbp_tmtime"><span>08-08</span> <span>2017</span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
-							<h2>CentOS 7关闭默认防火墙启用iptables防火墙</h2>
-							 <p><span class="blogpic"><a href="/"><img src="images/t03.jpg"></a></span> <br />CentOS 7.0默认使用的是firewall作为防火墙，这里改为iptables防火墙...<br /></p>
-                            <a href="hotnote/note1.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-						</div>
-					</li>
-						<li>
-						<time class="cbp_tmtime" ><span>08-08</span> <span>2017</span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel"data-scroll-reveal="enter right over 1s" >
-							<h2>materialish-progress进度条</h2>
-							 <p><span class="blogpic"><a href="/"><img src="images/t02.jpg"></a></span>一个material 风格的滚动式进度条(progress wheel)，兼容2.3。系统自带的progress wheel在Lollipop上看起来很好看，在4.0上也还将就，但是在2.3版本上看起来就有点吓人了，而我们...</p>
-                             <a href="hotnote/note2.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-						</div>
-					</li>
-                    <li>
-						<time class="cbp_tmtime" ><span>08-08</span> <span>2017</span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
-							<h2>如何提高Android Studio的编译速度</h2>
-							 <p><span class="blogpic"><a href="/"><img src="images/t01.jpg"></a></span>Gradle 2.4对执行性能有很大的优化，但Android Studio现在默认使用的是Gradle 2.2,?所以我们需要手动让Android Studio使用Gradle 2.4，在项目根目录下的 build.grade中加入...</p>
-                              <a href="hotnote/note3.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-						</div>
-					</li>
-                    <li>
-						<time class="cbp_tmtime" ><span>08-08</span> <span>2017</span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
-							<h2>nat123内网穿透4CentOS6.x</h2>
-							 <p><span class="blogpic"><a href="/"><img src="images/t03.jpg"></a></span>系统2.8.x（包括2.8.0）及以上Linux平台安装启动过程（相对简单/推荐）：...</p>
-                            <a href="hotnote/note4.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-						</div>
-					</li>
-                    <li>
-						<time class="cbp_tmtime" ><span>08-08</span> <span>2017</span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
-							<h2>nat123内网穿透4CentOS7.x</h2>
-							 <p><span class="blogpic"><a href="/"><img src="images/t02.jpg"></a></span>nat123内网穿透4CentOS7.x网站增加吸引力...</p>
-                              <a href="hotnote/note5.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-						</div>
-					</li>
-                    <li>
-						<time class="cbp_tmtime" ><span>08-08</span> <span>2017</span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
-							<h2>安卓/html上传后端php接收存储文件</h2>
-							 <p><span class="blogpic"><a href="/"><img src="images/t01.jpg"></a></span>后台死活传不上文件，索性就直接写了前端demo和后端上传接口，给自己和他测试用...</p>
-                              <a href="hotnote/note6.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-						</div>
-					</li>
-                    <li>
-						<time class="cbp_tmtime" ><span>08-08</span> <span>2017</span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
-							<h2>centos6.5搭建apache+mysql+php环境</h2>
-							 <p><span class="blogpic"><a href="/"><img src="images/t03.jpg"></a></span>centos6.5搭建apache+mysql+php环境centos6.5搭建apache+mysql+php环境centos6.5搭建apache+mysql+php环境...</p>
-                              <a href="hotnote/note7.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-						</div>
-					</li>
+	
+   <ul class="cbp_tmtimeline" id="cbp_tmtimeline">
+	</ul>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/gogo.json"></script>
+	<script type = "text/javascript"> 		
+		var strHtml = "";//存储数据的变量 
+		for(var i=0;i<4;i++){
+			strHtml+="<li>";									
+			strHtml+="<time class='cbp_tmtime'><span>"+nameList[i].monthday+"</span> <span>"+nameList[i].year+"</span></time>";
+			strHtml+="<div class='cbp_tmicon'></div>";
+			strHtml+="<div class='cbp_tmlabel' data-scroll-reveal='enter right over 1s' >";
+			strHtml+="<h2>"+nameList[i].title+"</h2>";
+			strHtml+=" <p><span class='blogpic'><a href='/'><img src='"+nameList[i].imgsrc+"'></a></span> <br />"+nameList[i].content+"<br /></p>";
+			strHtml+="<a href='"+nameList[i].ahref+"' target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+			strHtml+="</div>";
+			strHtml+="</li>";
 					
-				</ul>
+		}
+		document.getElementById("cbp_tmtimeline").innerHTML=strHtml;				 
+	</script>
   </div>
 </article>
 <footer>&copy;2016-2017 张阿坤@Akkun  <a href='http://www.miibeian.gov.cn' target='_blank'>豫ICP备17008159号</a> </footer>

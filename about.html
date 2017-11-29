@@ -12,6 +12,7 @@
 <script src="js/modernizr.js"></script>
 <![endif]-->
 <script src="js/scrollReveal.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
 <header>
@@ -62,16 +63,33 @@
 		<p>在路上，风雨无阻</p>
 		<p>Hello，张阿坤。</p>
     </ul>
-    <h2>About my blog</h2>
-    <p>域　名：www.zkyml.com  于2016年05月10日 </p>
-    <p>服务器：GitHub Pages<a href="http://www.zkyml.com" target="_blank" class="blog_link">点击访问</a>  <!-- <a href="/jstt/web/2014-01-18/644.html" target="_blank" class="blog_link">参考我的空间配置</a></p> -->
-
-
+    <h2>About my web</h2>
+	<div style="float:right;border:0px dotted black;margin:20px 20px 15px 20px;position:relative;align:center" >
+		<img height="50%" width="50%" id="wxImg" style="display:none;position:relative;align:center" alt="JustTheOne" src="images/wx.jpg" />	
+	</div>
+	<div>
+		<p>域　名：www.zkyml.com  于2016年05月10日 </p>
+		<p>服务器：GitHub Pages<a href="http://www.zkyml.com"  class="blog_link">点击访问</a>  <!-- <a href="/jstt/web/2014-01-18/644.html" target="_blank" class="blog_link">参考我的空间配置</a> --></p>
+		<p><a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg(1)">微信号:JustTheOne</a></p>
+		<p><a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg(2)">网站:在路上</a></p>	     
+		<p><a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg(3)">我的博客</a></p>	     
+		<p><a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg(4)">我的APP</a></p>			 
+	</div>
 </div>
   </div>
   </aside>
 </article>
 <footer>&copy;2016-2017 张阿坤@Akkun  <a href='http://www.miibeian.gov.cn' target='_blank'>豫ICP备17008159号</a> </footer>
+<script>
+	function  showImg(id){
+		var src=new Array("./images/wx.jpg","./images/web.jpg","./images/app.jpg");
+		$("#wxImg").src=src[id-1];
+		$("#wxImg").show();
+	}
+	function hideImg(){
+		$("#wxImg").hide();
+	}
+</script>
 <script>
 	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
 		(function(){

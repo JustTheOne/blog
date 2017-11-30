@@ -2,12 +2,12 @@
 /* about */
 /* banner */
  .banner { height: 180px; text-align: center; overflow: hidden; margin: 30px; line-height: 30px; text-shadow: #fff 1px 1px 1px; background: url(../images/bannertop.jpg) no-repeat -90px center; color: #333; padding: 40px 0 0 0 } 
-/*ÎÄ×Ö¶¯»­Ð§¹û*/
+/*æ–‡å­—åŠ¨ç”»æ•ˆæžœ*/
 
-/*¼ÍÄîÈÕ*/
+/*çºªå¿µæ—¥*/
 .memorial_day { overflow: hidden; position: relative; padding: 60px; }
 .time_axis { background: #e9f5fb; height: 6px; width: 100%; animation: time_a 5s; -moz-animation: time_a 5s; /* Firefox */ -webkit-animation: time_a 5s; /* Safari and Chrome */ -o-animation: time_a 5s; /* Opera */ }
-/*Ê±¼äÖá¶¯»­Ð§¹û*/
+/*æ—¶é—´è½´åŠ¨ç”»æ•ˆæžœ*/
 @keyframes time_a { 0% {
 width:0px;
 }

@@ -1,0 +1,5 @@
+var musicList=[
+{"musicUrl":"music/a.mp3"},
+{"musicUrl":"music/b.mp3"},
+{"musicUrl":"music/c.mp3"}
+]

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<body>
+<audio id="bgaudio" autoplay="true" src=""></audio>
+<!-- js代码区域  -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/music.json"></script>
+<script type="text/javascript">	
+	var musicPlayer=$("#bgaudio")[0];
+	function playmusic() {
+		var x = Math.round(Math.random() * (musicList.length-1));
+		musicPlayer.src=musicList[x].musicUrl;
+		musicPlayer.play();
+	}
+	function isEnd() {
+		if(musicPlayer.ended) {
+			playmusic();
+		}
+		setTimeout("isEnd()", 5000);
+	} 
+	playmusic();
+	isEnd();
+</script>
+</body>
+</html>

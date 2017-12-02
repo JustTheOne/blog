@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>在路上</title> 
+<meta name="keywords" content="在路上,博客,记忆,如非软弱,怎会连触手可及的幸福也要放弃?" />
+<meta name="description" content="一路走来几多风雨几多愁,只有不断学习才能让我真正变得强大到百毒不侵,无所畏惧" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="css/base.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script src="js/scrollReveal.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo" id="logo" data-scroll-reveal="enter right over 1s"> <!-- <a href="/"><img src="images/logo.png"></a>--><font size='12'>在路上</font></div> 
+  <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s">
+		<a href="home.html"><span>首页</span><span class="en">Home</span></a>
+		<a href="memory.html"><span>记忆</span><span class="en">Memory</span></a>
+		<!-- <!-- <a href="learn.html"><span>碎言碎语</span><span class="en">Doing</span></a> -->  
+		<!-- <a href="mbfx.html"><span>模板分享</span><span class="en">Share</span></a> -->
+		<!-- <!-- <a href="learn.html"><span>学无止境</span><span class="en">Learn</span></a> -->  
+		<a href="about.html"><span>关于我</span><span class="en">About</span></a>
+		 <a href="msgb.html"><span>留言</span><span class="en">Saying</span></a>  
+  </nav>
+</header>
+<article>
+  <div class="container">
+    <div class="blog" data-scroll-reveal="enter top" >
+      <figure>
+				<a href="#"><img src="images/t01.jpg"></a>
+				<p>
+					<a href="/">第一杯敬你</a>
+				</p>
+				<figcaption>死在我的过往里，与寂寞为友，与孤独同行。我是那个不要脸的无偿庸人，你是那个超高冷的大众情人。我干杯，你随意</figcaption>
+			</figure>
+			<figure>
+				<a href="#"><img src="images/t02.jpg"></a>
+				<p>
+					<a href="/">第二杯敬你</a>
+				</p>
+				<figcaption>面对我的羁绊应付的行云流水，依旧潇洒的活在自己的世界里，愿此分别绝非永诀。我干杯，你随意</figcaption>
+			</figure>
+			<figure>
+				<a href="#"><img src="images/t03.jpg"></a>
+				<p>
+					<a href="/">第三杯敬你</a>
+				</p>
+				<figcaption>对于梦想的执着努力，对于他人的追逐避如蛇蝎，对于家人的期待沉默不语，对于某的失去如临深渊。大概今生这些事，你都不会知晓。我干杯，你随意</figcaption>
+			</figure>
+    </div>
+	
+   <ul class="cbp_tmtimeline"></ul>
+	
+  </div>
+</article>
+<footer>&copy;2016-2017 张阿坤@Akkun  <a href='http://www.miibeian.gov.cn' target='_blank'>豫ICP备17008159号</a> </footer>
+<!-- js代码区域  -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/gogo.json"></script>
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigato r.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+</script> 
+<script type = "text/javascript"> 		
+	var perConut = 7;//hotnote现实条数
+	var strHtml = "";//存储数据的变量 
+	for(var i=0;i<perConut;i++){
+		strHtml+="<li>";									
+		strHtml+="<time class='cbp_tmtime'><span>"+nameList[i].monthday+"</span> <span>"+nameList[i].year+"</span></time>";
+		strHtml+="<div class='cbp_tmicon'></div>";
+		strHtml+="<div class='cbp_tmlabel' data-scroll-reveal='enter right over 1s' >";
+		strHtml+="<h2>"+nameList[i].title+"</h2>";
+		strHtml+=" <p><span class='blogpic'><a href='/'><img src='"+nameList[i].imgsrc+"'></a></span> <br />"+nameList[i].content+"<br /></p>";
+		strHtml+="<a href='"+nameList[i].ahref+"' target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+		strHtml+="</div>";
+		strHtml+="</li>";
+	}
+	$(".cbp_tmtimeline").html(strHtml);
+</script>
+</body>
+</html>

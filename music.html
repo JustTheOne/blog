@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
 <body>
-<audio id="bgaudio" autoplay="true" src=""></audio>
+<audio id="bgaudio" autoplay="true" src="">
+	<p>小乐会唱歌，但您的浏览器版本过低，不支持播放小乐的歌声。~~~~(>_<)~~~~</p>
+</audio>
 <!-- js代码区域  -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/music.json"></script>
@@ -9,9 +11,6 @@
 	var musicPlayer=$("#bgaudio")[0];
 	function playmusic() {
 		var x = Math.floor(Math.random() * musicList.length);
-		if(musicPlayer.src==musicList[x].musicUrl){
-			x++;
-		}
 		musicPlayer.src=musicList[x].musicUrl;
 		musicPlayer.play();
 	}

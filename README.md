@@ -2,7 +2,7 @@
 ***
 ## Just about me
 
-> Hi，我是Akkun，欢迎来到我的blog
+  Hi，我是Akkun，欢迎来到我的blog
 
  没有什么太新奇的东西，自从走上技术这条不归路，我就没想过退后
 

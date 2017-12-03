@@ -1,5 +1,5 @@
 @charset "utf-8";
-.gbook { margin: 30px }
+.msgb { margin: 30px }
 /* loading  */
 #fountainG { position: relative; width: 240px; height: 29px; margin-bottom: 30px }
 #fountainG li { position: absolute; top: 0;/* background: #6dabdc; 默认颜色 */ width: 29px; height: 29px; -moz-animation: bounce_fountainG 1.2s linear infinite; -moz-transform: scale(.3); -moz-border-radius: 19px; -webkit-animation: bounce_fountainG 1.2s linear infinite; -webkit-transform: scale(.3); -webkit-border-radius: 19px; -ms-animation: bounce_fountainG 1.2s linear infinite; -ms-transform: scale(.3); -ms-border-radius: 19px; -o-animation: bounce_fountainG 1.2s linear infinite; -o-transform: scale(.3); -o-border-radius: 19px; animation: bounce_fountainG 1.2s linear infinite; transform: scale(.3); border-radius: 19px; }

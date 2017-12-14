@@ -8,6 +8,24 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link href="css/base.css" rel="stylesheet">
 <link href="css/home.css" rel="stylesheet">
+<!--
+@media screen and (max-width:768px) {
+button { width: 60% }
+}
+
+@media screen and (max-width:500px) {
+button { width: 80%; font-size: 30px }
+h1 { margin: 0; padding-top: 0; padding-bottom: 30px; font-size: 60px }
+h2 { padding: 10px; font-size: 45px }
+}
+
+@media screen and (max-width:431px) {
+.fly { height: 130px }
+.none { height: 120px !important }
+}
+-->
+
+
 <!--[if lt IE 9]>
 <script src="js/modernizr.js"></script>
 <![endif]-->
@@ -16,6 +34,7 @@
 <script type="text/javascript" src="js/gogo.json"></script>
 </head>
 <body>
+
 <header>
   <div class="logo" data-scroll-reveal="enter right over 1s"> <a href="#"><img src="images/logo.png"></a></div> 
    <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s">
@@ -89,6 +108,7 @@
 			window.scrollReveal = new scrollReveal({reset: true});
 		})();
 	};
+	$("html").css("max-width",(parseInt(screen.width))+"px");
 </script>
 
 </body>

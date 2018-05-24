@@ -1,14 +1,16 @@
 var musicList=[
-{"musicUrl":"music/PRC 巴音汗 - 80000 ! (Prod.by DROYC原声版).mp3"},
-{"musicUrl":"music/Ryan.B - 再也没有.mp3"},
-{"musicUrl":"music/承利 - 樱花树下的约定 (咚鼓版).mp3"},
 {"musicUrl":"music/二珂 - 三角题.mp3"},
-{"musicUrl":"music/贺敬轩 - 罗曼蒂克的爱情 (DJ伟伟Mix).mp3"},
-{"musicUrl":"music/鞠文娴 - BINGBIAN病变 (女声版).mp3"},
-{"musicUrl":"music/张雪飞 - 走心小卖家.mp3"},
-{"musicUrl":"music/阿冷 - 春风吹.mp3"},
-{"musicUrl":"music/音阙诗听 - 红昭愿.mp3"},
-{"musicUrl":"music/幼稚园杀手 - 孤独症患者.mp3"},
-{"musicUrl":"music/阿涵 - 过客.mp3"},
-{"musicUrl":"music/艾辰 - 来不及说再见.mp3"}
+{"musicUrl":"music/Rag'N'Bone Man - Skin.mp3"},
+{"musicUrl":"music/陈芳语 - 爱你.mp3"},
+{"musicUrl":"music/刀郎 - 西海情歌.mp3"},
+{"musicUrl":"music/邓福如 - Me & U (英文版).mp3"},
+{"musicUrl":"music/何易涵 - 鲸鱼恋.mp3"},
+{"musicUrl":"music/简弘亦 - 问.mp3"},
+{"musicUrl":"music/街道办GDC - 春娇与志明.mp3"},
+{"musicUrl":"music/买辣椒也用券 - 起风了.mp3"},
+{"musicUrl":"music/孟子坤 - 晚枫歌.mp3"},
+{"musicUrl":"music/摩登兄弟 - 走马.mp3"},
+{"musicUrl":"music/漆柚 - 情书 (中文版).mp3"},
+{"musicUrl":"music/深七 - 9277.mp3"},
+{"musicUrl":"music/马隆 - 都是月亮惹的祸.mp3"}
 ]

@@ -20,16 +20,16 @@
 
    - 微信号:
    
-  ![微信号:JustTheOne](./images/wx.jpg)
+  ![微信号:JustTheOne](./img/wx.jpg)
 
    - 网站:
    
-  ![网站:在路上](./images/web.jpg)
+  ![网站:在路上](./img/web.jpg)
 
    - 我的博客 
    
-  ![我的博客:在路上](./images/web.jpg)
+  ![我的博客:在路上](./img/web.jpg)
 
    - 我的APP:
    
-  ![我的APP:JustTheOne](./images/app.jpg)
+  ![我的APP:JustTheOne](./img/app.jpg)
